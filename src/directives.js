@@ -27,7 +27,7 @@ exports.control = function () {
   };
 };
 
-function Controller ($scope, $attributes) {
+function Controller ($scope) {
   function set (value) {
     $scope.$apply(function () {
       $scope.toggle = value;
@@ -43,7 +43,7 @@ exports.action = function () {
     require: '^textToggle',
     restrict: 'AE',
     compile: function (element) {
-      element.contents().wrap('<a></a>')
+      element.contents().wrap('<a></a>');
       return function ($scope, element, $attributes, toggle) {
         toggle.action = element;
         element.on('click', function () {
