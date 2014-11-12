@@ -7,8 +7,11 @@ exports.control = function () {
     require: 'textToggle',
     restrict: 'AE',
     controller: Controller,
+    scope: {
+      toggle: '='
+    },
     link: function ($scope, element, $attributes, toggle) {
-      $scope.$watch($attributes.toggle, function (value) {
+      $scope.$watch('toggle', function (value) {
         if (value) {
           toggle.action.css('display', 'none');
           toggle.confirmation.css('display', '');
@@ -25,7 +28,7 @@ exports.control = function () {
 function Controller ($scope, $attributes) {
   function set (value) {
     $scope.$apply(function () {
-      $scope[$attributes.toggle] = value;
+      $scope.toggle = value;
     });
   }
   this.on = angular.bind(null, set, true);
