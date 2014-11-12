@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+- '0.10'
+deploy:
+  provider: npm
+  email: bvdrucker@gmail.com
+  api_key:
+    secure: MSTdgHJr80qRZMH0HNOS9xVSa2D2mqLkIUjIA85TnE5jRFtgcQHFNITb6Q1w0U+wo/YNVb8WhXCVqCdLD0jnjo0VDXyPEl8bK9NI4B7y9sdKGp6Z0d/D5xYF8Fkfw+oST0CHSGMkPyi3F4PUzjwiK837RsFatEiVDSJVoemhFzs=
+  on:
+    tags: true
+    all_branches: true
+    repo: bendrucker/angular-text-toggle
