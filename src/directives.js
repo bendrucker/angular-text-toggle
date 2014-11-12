@@ -6,6 +6,8 @@ exports.control = function () {
   return {
     require: 'textToggle',
     restrict: 'AE',
+    transclude: true,
+    template: '<ng-transclude></ng-transclude>',
     controller: Controller,
     scope: {
       toggle: '='

@@ -11,6 +11,7 @@ describe('text-toggle', function () {
 
   var normal = require('./normal.html');
   var customUndo = require('./custom-undo.html');
+  var transclude = require('./transclude.html');
 
   it('displays the action text when the condition is off', function () {
     scope.condition = false;
@@ -61,6 +62,22 @@ describe('text-toggle', function () {
     scope.$digest();
     expect(element.find('toggle-confirmation').find('undo').text())
       .to.equal('REVERSE!');
+  });
+
+  it('transcludes the action', function () {
+    scope.name = 'Ben';
+    var element = $compile(transclude)(scope);
+    scope.$digest();
+    expect(element.find('toggle-action').text())
+      .to.contain('Switch me on, Ben');
+  });
+
+  it('transcludes the confirmation', function () {
+    scope.name = 'Ben';
+    var element = $compile(transclude)(scope);
+    scope.$digest();
+    expect(element.find('toggle-confirmation').text())
+      .to.contain('I am on, Ben');
   });
 
 });
