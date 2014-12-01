@@ -2,9 +2,8 @@
 
 var directives = require('./directives');
 
-angular.module('text-toggle', [])
+module.exports = angular.module('text-toggle', [])
   .directive('textToggle', directives.control)
   .directive('toggleAction', directives.action)
-  .directive('toggleConfirmation', directives.confirmation);
-
-module.exports = 'text-toggle';
+  .directive('toggleConfirmation', directives.confirmation)
+  .name;
