@@ -1,4 +1,4 @@
-angular-text-toggle [![Build Status](https://travis-ci.org/bendrucker/angular-text-toggle.svg?branch=v1.0.2)](https://travis-ci.org/bendrucker/angular-text-toggle)
+angular-text-toggle [![Build Status](https://travis-ci.org/bendrucker/angular-text-toggle.svg?branch=v1.0.2)](https://travis-ci.org/bendrucker/angular-text-toggle) [![Greenkeeper badge](https://badges.greenkeeper.io/bendrucker/angular-text-toggle.svg)](https://greenkeeper.io/)
 ===================
 
 A simple boolean text control with undo support. [Try it!](http://embed.plnkr.co/OtDkEj/preview)
